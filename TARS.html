@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>TARS</title>
+    <link rel=icon href=TARS.png sizes="16x16" type="png">
+</head>
+
+<body style="overflow: hidden; padding: 0%; margin: 0%;">
+    <iframe id="video" width="1555" height="780" src="https://www.youtube.com/embed/1i9kcBHX2Nw"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    <script>
+        window.onload = () => {
+            videosource = prompt("Enter video link..")
+            videosource = videosource.replace("watch?v=", "embed/")
+            v = document.getElementById("video")
+            v.src = videosource
+        }
+
+        window.onresize = () => {
+            console.log("height is " + window.innerHeight)
+            console.log("width is " + window.innerWidth)
+            v.height = window.innerHeight
+            v.width = window.innerWidth
+        }
+    </script>
+</body>
+
+</html>
